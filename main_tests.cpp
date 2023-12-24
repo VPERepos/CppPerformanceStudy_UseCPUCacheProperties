@@ -3,7 +3,6 @@
 
 TEST(TestContainers2d, IndexingCorrectness) {
   
-  EXPECT_STRNE("hello", "world");
-  
-  EXPECT_EQ(7 * 6, 42);
+  //TODO: Test for initialization and iteration correctness
+
 }
