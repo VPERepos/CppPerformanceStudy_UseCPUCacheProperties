@@ -3,10 +3,6 @@
 #include <iostream>
 
 
-Containers2d::Containers2d(int theWidth, int theHeight):m_Width{theWidth}, m_Height{theHeight}
-{
-};
-
 long long Containers2d::processContainer(const bool& theByRows)
 {
     auto start = std::chrono::high_resolution_clock::now();

@@ -16,11 +16,11 @@ int main()
 
     for(int i=0; i < numberOfSamplesForAveraging; ++i)
     {
-        std::vector<std::unique_ptr<Containers2d>> containers;
+        std::vector<std::shared_ptr<Containers2d>> containers;
 
-        containers.emplace_back(std::make_unique<Array1d>(width, height));
-        containers.emplace_back(std::make_unique<Array2d>(width, height));
-        containers.emplace_back(std::make_unique<Vector2d>(width, height));
+        containers.emplace_back(std::make_shared<Array1d>(width, height));
+        containers.emplace_back(std::make_shared<Array2d>(width, height));
+        containers.emplace_back(std::make_shared<Vector2d>(width, height));
         
         std::vector<double> processingTimesForContainers;
         bool byRows = true;

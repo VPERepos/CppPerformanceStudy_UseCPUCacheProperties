@@ -5,7 +5,7 @@
 
 class Containers2d{
     public:
-        Containers2d(int theWidth, int theHeight);
+        Containers2d(int theWidth, int theHeight):m_Width{theWidth}, m_Height{theHeight}{};
         virtual ~Containers2d(){};
         virtual void initializeContainerWithRandomNumbers();
         long long processContainer(const bool& theByRows);
