@@ -1,6 +1,6 @@
 #include "Containers2d.h"
 
-#include <iostream>
+
 
 
 long long Containers2d::processContainer(const bool& theByRows)

@@ -1,5 +1,4 @@
 #include "Containers2d.h"
-#include <iostream>
 #include <memory>
 
 int main()
