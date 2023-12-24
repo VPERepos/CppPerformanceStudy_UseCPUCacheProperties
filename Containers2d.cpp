@@ -1,7 +1,9 @@
 #include "Containers2d.h"
 
 
-
+Containers2d::~Containers2d() {
+    
+}
 
 long long Containers2d::processContainer(const bool& theByRows)
 {
@@ -67,7 +69,7 @@ void Array1d::processArray1dByCols(double*& theArray)
         for(int j = 0; j < m_Height; ++j)
         {
             auto element = theArray[j*m_Width + i];
-            theArray[i*m_Width + m_Height] = element*element;
+            theArray[j*m_Width + i] = element*element;
         }
     }
 }

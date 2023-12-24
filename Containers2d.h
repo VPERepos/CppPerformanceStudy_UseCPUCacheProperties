@@ -1,3 +1,5 @@
+#ifndef CONTAINERS2D_H
+#define CONTAINERS2D_H
 #pragma once
 #include <vector>
 #include <random>
@@ -7,12 +9,12 @@
 class Containers2d{
     public:
         Containers2d(int theWidth, int theHeight):m_Width{theWidth}, m_Height{theHeight}{};
-        virtual ~Containers2d(){};
-        virtual void initializeContainerWithRandomNumbers();
+        virtual ~Containers2d();
+        virtual void initializeContainerWithRandomNumbers(){};
         long long processContainer(const bool& theByRows);
     protected:
-        virtual void processContainerByRows();
-        virtual void processContainerByCols();
+        virtual void processContainerByRows(){};
+        virtual void processContainerByCols(){};
         
         int m_Width;
         int m_Height;
@@ -64,3 +66,5 @@ class Vector2d: public Containers2d{
     private:
         std::vector<std::vector<double>> m_Vector2d;
 };
+
+#endif

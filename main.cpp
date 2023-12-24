@@ -5,7 +5,7 @@ int main()
 {
     const int width = 1000;
     const int height = 1000;
-    const int numberOfSamplesForAveraging = 100;
+    const int numberOfSamplesForAveraging = 1000;
     const int numberOfContainerTypes = 3;
 
     std::vector<std::vector<double>> processingTimesTable;
