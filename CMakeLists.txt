@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
 project(UseCache CXX)
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CONFIGURATION_TYPES "Release")
 
 enable_testing()
 
