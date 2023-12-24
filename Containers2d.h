@@ -25,7 +25,7 @@ class Containers2d{
 class Array1d: public Containers2d{
     public:
         Array1d(int theWidth, int theHeight):Containers2d(theWidth, theHeight){};
-        ~Array1d();
+        ~Array1d()override;
         void initializeContainerWithRandomNumbers()override;
     protected:
         void processContainerByRows() override;
@@ -39,7 +39,7 @@ class Array1d: public Containers2d{
 class Array2d: public Containers2d{
     public:
         Array2d(int theWidth, int theHeight):Containers2d(theWidth, theHeight){};
-        ~Array2d();
+        ~Array2d()override;
         void initializeContainerWithRandomNumbers()override;
     protected:
         void processContainerByRows() override;
@@ -53,7 +53,7 @@ class Array2d: public Containers2d{
 class Vector2d: public Containers2d{
     public:
         Vector2d(int theWidth, int theHeight):Containers2d(theWidth, theHeight){};
-        ~Vector2d(){};
+        ~Vector2d()override{};
         void initializeContainerWithRandomNumbers()override;
     protected:
         void processContainerByRows() override;
