@@ -6,7 +6,8 @@ enable_testing()
 
 find_package(GTest REQUIRED)
 
-add_executable(${PROJECT_NAME} Containers2d.h Containers2d.cpp main.cpp)
+add_executable(${PROJECT_NAME} Containers2d.cpp Containers2d.h main.cpp)
+target_link_libraries(${PROJECT_NAME} GTest::gtest)
 
 add_executable(Tests main_tests.cpp)
 
