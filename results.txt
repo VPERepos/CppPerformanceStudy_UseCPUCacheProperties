@@ -1,3 +1,4 @@
+WxH: 1000x1000:
 Run 1:
 Process 1D Array by rows took (microseconds) = 2732.27
 Process 2D Array by rows took (microseconds) = 2622.73
@@ -25,4 +26,30 @@ Process 1D Array by cols took (microseconds) = 3023.59
 Process 2D Array by cols took (microseconds) = 2816.27
 Process 2D Vector by cols took (microseconds) = 7412.62
 
+WxH: 1000x500:
+Run 1:
+Process 1D Array by rows took (microseconds) = 2718.36
+Process 2D Array by rows took (microseconds) = 2621.84
+Process 2D Vector by rows took (microseconds) = 7503.24
 
+Process 1D Array by cols took (microseconds) = 3213.31
+Process 2D Array by cols took (microseconds) = 2889.82
+Process 2D Vector by cols took (microseconds) = 7958.24
+
+Run 2:
+Process 1D Array by rows took (microseconds) = 2689.3
+Process 2D Array by rows took (microseconds) = 2579.33
+Process 2D Vector by rows took (microseconds) = 9895.98
+
+Process 1D Array by cols took (microseconds) = 3141.53
+Process 2D Array by cols took (microseconds) = 2815.92
+Process 2D Vector by cols took (microseconds) = 7616.73
+
+Run 3:
+Process 1D Array by rows took (microseconds) = 2731.12
+Process 2D Array by rows took (microseconds) = 2606.53
+Process 2D Vector by rows took (microseconds) = 9260.3
+
+Process 1D Array by cols took (microseconds) = 3188.61
+Process 2D Array by cols took (microseconds) = 2847.77
+Process 2D Vector by cols took (microseconds) = 7796.7

@@ -7,7 +7,9 @@ enable_testing()
 
 find_package(GTest REQUIRED)
 
+set(BUILD_SHARED_LIBS true)
 add_library(ContainersStatic Containers2d.cpp)
+
 add_executable(${PROJECT_NAME} main.cpp)
 target_link_libraries(${PROJECT_NAME} GTest::gtest ContainersStatic)
 
