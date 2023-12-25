@@ -3,8 +3,8 @@
 
 int main()
 {
-    const int width = 1000;
-    const int height = 1000;
+    const int width = 500;
+    const int height = 500;
     const int numberOfSamplesForAveraging = 1000;
     const int numberOfContainerTypes = 3;
 
