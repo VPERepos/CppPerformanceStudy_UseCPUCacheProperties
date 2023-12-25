@@ -1,4 +1,79 @@
 @startuml
+skinparam monochrome true
+skinparam classAttributeIconSize 0
 
+participant "main()" as A
+participant "Array1d:object" as B
+participant "Array2d:object" as C
+participant "Vector2d:object" as D
+activate A
+loop 1000 times
 
+A -> B **: make_shared<Array1d>()
+
+B -> B : Array1d(width, height)
+activate B
+B ->> A : shared_pointer<Array1d>
+A -> A : emplace_back()
+
+A -> C **: make_shared<Array2d>()
+
+C -> C : Array2d(width, height)
+activate C
+C ->> A : shared_pointer<Array2d>
+A -> A : emplace_back()
+
+A -> D **: make_shared<Vector2d>()
+
+D -> D : Vector2d(width, height)
+activate D
+D ->> A : shared_pointer<Vector2d>
+A -> A : emplace_back()
+
+A -> B : initializeContainerWithRandomNumbers()
+A -> C : initializeContainerWithRandomNumbers()
+A -> D : initializeContainerWithRandomNumbers()
+
+alt byRows == true
+A -> B : processContainer(byRows)
+B ->> A: execution time in microseconds
+end
+A -> A : emplace_back( execution time )
+alt byRows == false
+A -> B : processContainer(byRows)
+B ->> A: execution time in microseconds
+end
+A -> A : emplace_back( execution time )
+
+alt byRows == true
+A -> C : processContainer(byRows)
+C ->> A: execution time in microseconds
+end
+A -> A : emplace_back( execution time )
+alt byRows == false
+A -> C : processContainer(byRows)
+C ->> A: execution time in microseconds
+end
+A -> A : emplace_back( execution time )
+
+alt byRows == true
+A -> D : processContainer(byRows)
+D ->> A: execution time in microseconds
+end
+A -> A : emplace_back( execution time )
+alt byRows == false
+A -> D : processContainer(byRows)
+D ->> A: execution time in microseconds
+end
+A -> A : emplace_back( execution time )
+deactivate B
+deactivate C
+deactivate D
+end
+
+loop 1000 times
+A -> A : average execution times
+end
+A -> A : print averaged execution times
+deactivate A
 @enduml
